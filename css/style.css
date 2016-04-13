@@ -1,0 +1,627 @@
+/*
+body,div,ul,ol,li,dl,dt,dd,h1,h6,p,table,tbody,thead,tfoot,tr,th,td,caption,a,input,form,select,
+option,label,textarea,img,span,i,b,em,strong,sub,sup,u{
+    margin:0;
+    padding:0;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+}*/
+img{
+    padding:0;
+    border:0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #FFFFFF;
+}
+/*登?框*/
+#bg {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index:100;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.2;
+}
+
+#box {
+    display:none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index:110;
+    margin: -150px 0 0 -210px;
+    width: 420px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background:#fff;
+}
+
+#boxTop {
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px 5px 0 0;
+    background: #ccc;
+    font-weight: bold;
+}
+.logIn{
+
+    width:222px;
+    height:80px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-40px 0 0 -110px;
+}
+
+.logIn input{
+    margin:5px 0;
+}
+.submit{
+    cursor:pointer;
+    width:60px;
+    height:30px;
+
+
+}
+#close{
+    float:right;
+    cursor:pointer;
+}
+/*登?框End*/
+#header {
+    height: 85px;
+    border-bottom: 1px solid #ccc;
+}
+
+#header_black {
+    height: 30px;
+    background: #333;
+}
+
+.black_left {
+    float: left;
+    margin-left: 20px;
+}
+
+.black_left #app_icon {
+    /*background:url(../img/app_icon_4940eb3.png) 0 0 no-repeat;*/
+}
+.black_left #app_icon img{
+    margin:0 3px -1px 0;
+}
+.black_left li {
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#header_black .black_left li a {
+    color: white;
+    text-decoration: none;
+}
+
+.black_right {
+    float: right;
+    margin-right: 20px;
+}
+
+.black_right li {
+    list-style: none;
+    float: left;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+
+}
+
+.black_right li a {
+    color: white;
+    text-decoration: none;
+}
+
+#login{
+
+
+
+}
+#name{}
+#password{}
+
+/*----------------------白色?航?-------------------------------------*/
+#header_white{
+  overflow:hidden;
+    width:1000px;
+    height:55px;
+    margin:0 auto;
+}
+#header_white img{
+    vertical-align: middle;
+
+}
+#header_white span em{
+
+    line-height:55px;
+}
+/*.city {
+
+    /!*background:url(../img/logo_1c5763c.png) 0 0 no-repeat;*!/
+
+    line-height: 55px;
+
+}
+
+.city #changeCity {
+
+    font-size: 12px;
+}*/
+
+.nav {
+    margin-left:250px;
+    width: 500px;
+    height: 55px;
+}
+
+.nav li {
+    list-style: none;
+    float: left;
+    height: 55px;
+    line-height: 55px;
+
+    margin: 0 10px;
+    border-bottom: 2px solid #37C7D4;
+}
+
+.nav li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+/*------------------------以下??面主体-----------------------------*/
+#content {
+    position: relative;
+    width: 1005px;
+
+    margin: 0 auto;
+
+}
+
+#content .content_left {
+    position: relative;
+    float: left;
+    margin: 30px 15px 0 0;
+
+    width: 230px;
+    /*height:100%;*/
+    background: #FAFAFA;
+}
+
+#content .content_left .box {
+    margin: 20px 0 0 20px;
+}
+
+#content .content_left .box h2 {
+    height: 30px;
+    font-weight: 500;
+}
+
+#content .content_left li {
+    list-style: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+#content .content_left li a {
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+    color: black;
+}
+
+#content .content_left li a:hover {
+    text-decoration: underline;
+    color: #00B38A;
+}
+
+.subscription {
+    margin-top: 20px;
+    height: 45px;
+    line-height: 45px;
+
+    text-align: center;
+    border-bottom: 2px solid #00B38A;
+}
+
+.subscription a {
+    text-decoration: none;
+    font-weight: 500;
+
+}
+/*--------?航滑?出?-----*/
+.menu_sub{
+    display:none;
+    width:500px;
+    height:400px;
+    position:absolute;
+    left:230px;
+    top:0;
+    z-index:10;
+    background:#fff;
+    border:1px solid #ccc;
+}
+.dn{
+    display:none;
+}
+
+/*------------------------------------以下??面的右?----------------------------------*/
+#content .content_right {
+    float: left;
+    margin: 30px 0 0 15px;
+    width: 740px;
+    /* border: 1px solid blueviolet;*/
+}
+
+#content .content_right .content_search {
+    height: 35px;
+    border: 2px solid #00B38A;
+}
+
+#content .content_right .content_search .input {
+    float: left;
+    height: 25px;
+    width: 590px;
+    padding: 5px;
+    border: none;
+
+}
+
+#content .content_right .content_search div {
+    color: white;
+    line-height: 35px;
+    text-align: center;
+    background: #00B38A;
+    cursor: pointer;
+}
+
+#content .content_right .content_hotsearch {
+    float: left;
+    height: 35px;
+    width:740px;
+
+}
+
+#content .content_right .content_hotsearch span {
+    font-size: 14px;
+}
+
+#content .content_right .content_hotsearch a {
+    text-decoration: none;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+}
+#content .content_right .imgs1{
+    width:740px;
+    overflow:hidden;
+    position:relative;
+}
+#content .content_right .imgs1_left {
+   /* float: left;*/
+    height: 160px;
+    width: 610px;
+   /* overflow: hidden;*//*--------------??*/
+    font-size:0;
+    position:absolute;
+    left:0;
+    top:-160px;
+}
+
+#content .content_right .imgs1_right {
+    float: right;
+
+    height: 160px;
+    width: 127px;
+
+}
+#content .content_right .imgs1_right em{
+   background:url(../img/control_current_3d8ebbe.png) 0 0 no-repeat;
+    position:absolute;
+    top:110px;/*0,55,110*/
+    left:0;
+    width:127px;
+    height:50px;
+    z-index:21;
+
+}
+
+#content .content_right .imgs1_right ul{
+    list-style-type:none;
+    width:113px;
+    position:absolute;
+    left:10px;
+
+
+}
+#content .content_right .imgs1_right ul li{
+    font-size:0;
+    margin-bottom:5px;
+}
+
+#content .content_right .imgs1_right img {
+    padding:4px 0;
+}
+
+#content .content_right .imgs1_right ul li i{
+    width:127px;
+    height:50px;
+    position:absolute;
+    left:-4px;
+    top:-4px;
+
+    background:url(../img/thumb_cover_d65c767.png) 0 0 no-repeat;
+
+}
+
+
+/*--------------------------------主?中的第二行?片---------------------*/
+#content .content_right .imgs2 {
+    clear: both;
+    height: 100px;
+
+}
+
+#content .content_right .imgs2 img {
+    float: left;
+    margin: 20px 10px 20px 0;
+    height: 112px;
+    width: 112px;
+    border: 1px solid #FAFAFA;
+}
+
+#content .content_right #last_img {
+    margin-right: 0;
+}
+
+/*--------------------------------?位分?---------------------------------*/
+#content .job_message .job_classify {
+    clear: both;
+
+    height: 40px;
+    background: #F6F6F6;
+}
+
+#content .job_message .job_classify li {
+    list-style: none;
+    float: left;
+    padding: 0 10px;
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    /*border-top:3px solid #00B38A;*/
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#content .job_message .job_classify li:hover {
+    border-top: 3px solid #00B38A;
+    background: white;
+}
+
+/*--------------------------------以下是?位具体信息描述-------------------------*/
+
+#content .job_specify {
+
+    margin: 10px auto;
+    padding: 0;
+
+}
+
+#content .job_specify span {
+    font-size: 14px;
+    margin-right: 20px;
+    color: #3c3c3c;
+}
+
+#content .job_specify li {
+    list-style: none;
+    height: 40px;
+    line-height: 40px;
+}
+
+#content .job_specify a {
+    padding: 0 5px;
+    width: 50px;
+    text-decoration: none;
+    color: #00B38A;
+}
+
+#content .job_des {
+    /*//左??位信息描述*/
+    float: left;
+    padding-left: 20px;
+    width: 380px;
+
+}
+
+#content .job_des .pay {
+    color: red;
+    font-size: 20px;
+}
+
+#content .company_des {
+    /* //右?公司信息描述*/
+    float: left;
+}
+
+#content .company_des a {
+    margin: 0;
+    padding: 0;
+}
+
+#content .des {
+    /*//底部灰色?描述信息*/
+    clear: both;
+    height: 40px;
+    line-height: 40px;
+    background: #F6F6F6;
+    border-bottom: 1px dashed #ccc;
+}
+
+#content .des .des_left span {
+    font-size: 14px;
+    color: #3c3c3c;
+    margin-left: 10px;
+
+}
+
+#content .des li {
+    float: left;
+    width: 400px;
+
+}
+
+#content .des .des_right {
+
+    width: 300px;
+}
+
+#content .des .des_right span {
+    border: 1px solid #3c3c3c;
+    padding: 3px;
+
+}
+/*-----------------------------更多及友情?接-------------------------------*/
+#more{
+    float:right;
+    margin-top:25px;
+    margin-bottom:40px;
+    width:108px;
+    height:32px;
+    line-height:32px;
+    padding-left:10px;
+    background:#00B38A;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+#content .content_right .links {
+    clear: both;
+
+    border: 1px solid #ccc;
+    font-size: 18px;
+
+}
+#content .content_right ._links{
+    float:left;
+    width:90px;
+    height:100%;
+    line-height:60px;
+}
+#content .content_right .company_links{
+    float:left;
+    width:600px;
+    margin-top:20px;
+    margin-bottom:70px;
+
+}
+#content .content_right .company_links a{
+    display:inline-block;
+    height:30px;
+    line-height:30px;
+    text-decoration:none;
+    font-size:12px;
+    color:#555555;
+    padding:0;
+    margin:0;
+}
+#content .content_right .company_links a:hover{
+    color:#0044DD;
+    text-decoration:underline;
+}
+#content .content_right .company_links span{
+    height:25px;
+    line-height:25px;
+    margin:2px;
+}
+/*-------------------------------------------底部-----------------------------*/
+#footer{
+    clear:both;
+}
+#footer .footer_top{
+
+    padding:0 200px;
+
+}
+#footer .footer_top li{
+    float:left;
+    height:30px;
+    line-height:30px;
+    padding:0 10px;
+    text-align:center;
+    list-style:none;
+    font-size:14px;
+
+}
+#footer .footer_bottom{
+    clear:both;
+    height:35px;
+    line-height:35px;
+    color:#ccc;
+    font-size:14px;
+    text-align:center;
+    margin-bottom:3px;
+}
+/*--------------------------------固定的登??------------------------------*/
+#login{
+
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:60px;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    background:#6BC1A6;
+    /*margin-bottom:10px;*/
+}
+#login .login{
+    float:left;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    width:200px;
+    margin-left:400px;
+
+}
+#login .register{
+    float:right;
+    background:#E6706E;
+    width:250px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+}
+/*-------------------------------回到?部--------------------------------------*/
+#back{
+    position:fixed;
+    right:100px;
+    bottom:150px;
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    background:#0044DD;
+    cursor:pointer;
+}
