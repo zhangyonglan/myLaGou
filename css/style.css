@@ -17,14 +17,18 @@ img{
 
 html, body {
     background: #FFFFFF;
+    width:100%;
+    height:100%;
+
 }
+
 /*登?框*/
 #bg {
     display: none;
     position: absolute;
     left: 0;
     top: 0;
-    z-index:100;
+    z-index:200;
     width: 100%;
     height: 100%;
     background: #000;
@@ -86,6 +90,7 @@ html, body {
 #header_black {
     height: 30px;
     background: #333;
+    font-size:14px;
 }
 
 .black_left {
@@ -141,54 +146,94 @@ html, body {
 #password{}
 
 /*----------------------白色?航?-------------------------------------*/
+/*---------------白色?航?---------------*/
+*{
+    padding:0;
+    margin:0;
+    font-family:"Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
+}
+ul,li{
+    list-style:none;
+}
+li{
+    float:left;
+
+}
 #header_white{
-  overflow:hidden;
     width:1000px;
     height:55px;
     margin:0 auto;
-}
-#header_white img{
-    vertical-align: middle;
+    overflow:hidden;
 
 }
-#header_white span em{
+.city{
 
-    line-height:55px;
+    width:220px;
+    height:100%;
+    float:left;
+
+    margin-right:20px;
+
+
 }
-/*.city {
+.city h1{
+    background:url(../img/logo_1c5763c.png) 0 0 no-repeat;
+    text-indent: 99em;
+    float:left;
+    width:97px;
+    height:34px;
+    margin:10px 0;
+    padding:0;
+    font-size:24px;
+}
+.city img{
+    vertical-align:middle;
+}
+.suggestCity{
+    height:44px;
+    padding:10px 0 0 12px;
+    float:left;
+    line-height:44px;
+}
+.suggestCity strong{
+    font-weight:400;
+    color:#000;
+}
+.suggestCity em{
+    font-size:12px;
+    cursor:pointer;
+    color:#ccc;
+}
+.nav{
 
-    /!*background:url(../img/logo_1c5763c.png) 0 0 no-repeat;*!/
-
-    line-height: 55px;
+    float:left;
+    width:700px;
+    height:100%;
 
 }
 
-.city #changeCity {
+.nav li{
+    float:left;
+    margin:0 16px;
+    height:54px;
+    line-height:54px;
 
-    font-size: 12px;
-}*/
-
-.nav {
-    margin-left:250px;
-    width: 500px;
-    height: 55px;
 }
+.nav li a{
+    display:inline-block;
+    text-decoration:none;
+    font-size:18px;
+    color:#333;
+    height:54px;
 
-.nav li {
-    list-style: none;
-    float: left;
-    height: 55px;
-    line-height: 55px;
-
-    margin: 0 10px;
-    border-bottom: 2px solid #37C7D4;
 }
-
-.nav li a {
-    color: #ccc;
-    text-decoration: none;
+.nav li a.current{
+    border-bottom:2px solid #00b38a;
 }
-
+.nav li a:hover{
+    border-bottom:2px solid #00b38a;
+}
+/*---------------白色?航??束*/
 /*------------------------以下??面主体-----------------------------*/
 #content {
     position: relative;
@@ -200,18 +245,34 @@ html, body {
 
 #content .content_left {
     position: relative;
+
     float: left;
     margin: 30px 15px 0 0;
-
     width: 230px;
-    /*height:100%;*/
+    /*overflow:hidden;*/
     background: #FAFAFA;
 }
 
 #content .content_left .box {
-    margin: 20px 0 0 20px;
-}
 
+    /*border:2px solid #FAFAFA;
+    padding: 20px 0 0 20px;
+    overflow:hidden;*/
+}
+#content .content_left .menu_main{
+    position:relative;
+
+    border:2px solid #FAFAFA;
+    padding: 20px 0 0 20px;
+    overflow:hidden;
+}
+#content .content_left .menu_main:hover{
+    z-index: 11;
+    border-width:2px;
+    border-style:solid;
+    border-color:#ccc #fafafa #ccc #ccc;
+
+}
 #content .content_left .box h2 {
     height: 30px;
     font-weight: 500;
@@ -231,6 +292,7 @@ html, body {
 }
 
 #content .content_left li a:hover {
+
     text-decoration: underline;
     color: #00B38A;
 }
@@ -254,12 +316,13 @@ html, body {
     display:none;
     width:500px;
     height:400px;
-    position:absolute;
+    position:absolute;/*相?于左??航定位，也可以相?于body?行Fixed定位（不太准确）*/
     left:230px;
     top:0;
     z-index:10;
-    background:#fff;
-    border:1px solid #ccc;
+    margin-left: -2px;
+    border:2px solid #ccc;
+   background: #fafafa;
 }
 .dn{
     display:none;
@@ -589,6 +652,7 @@ html, body {
 
     position:fixed;
     bottom:0;
+    z-index:100;
     width:100%;
     height:60px;
     color:white;
@@ -618,10 +682,13 @@ html, body {
 #back{
     position:fixed;
     right:100px;
-    bottom:150px;
-    width:50px;
-    height:50px;
+    bottom:100px;
+    width:28px;
+    height:64px;
     border-radius:10px;
-    background:#0044DD;
+    background:url("../img/backtop_6e69c27.png");
     cursor:pointer;
+}
+#back:hover{
+    background-position: -28px 0;
 }
